@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PUCIT Help Desk - Open Community of PUCIT</title>
+  <title>Hirings - PUCIT Help Desk</title>
 
-  <meta name="description" content="PUCIT Help Desk is a platform helping students seeking information about admissions, university activities and career counseling since 2014." />
+  <meta name="description" content="Societies in PUCIT are hiring now. They are looking for candidates like you. Apply now." />
   <meta name="keywords" content="PUCIT,help,desk,pucithd,team" />
          <!-- Twitter Card data -->
   <meta name="twitter:card" content="PUCIT Help Desk | Open Community of PUCIT">
@@ -18,6 +18,7 @@
 
         <!-- Open Graph data -->
   <meta property="og:title" content="PUCIT Help Desk | Open Community of PUCIT" />
+  <meta property="og:description" content="Societies in PUCIT are hiring now. They are looking for candidates like you. Apply now." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://pucithd.com/" />
   <meta property="og:image" content="http://pucithd.com/assets/img/main.png" />
@@ -30,7 +31,7 @@
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link href="https:Open Community of PUCIT//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <!-- Bulma Version 0.6.1 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" />
   <style type="text/css">
@@ -40,50 +41,42 @@
   </style>
 </head>
 <body>
-  <section class="hero is-fullheight is-default is-bold">
-    <div class="hero-head">
-      <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-        <a class="navbar-item">
-          <img src="assets/img/logo.png" alt="PUCIT Help Desk">
+  <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+    <a class="navbar-item" href="index.html">
+      <img src="assets/img/logo.png" alt="PUCIT Help Desk">
+    </a>
+    <div class="navbar-end">
+      <div class="navbar-item right">
+        <a href="hirings.html" class=" button is-info">
+          Hirings
         </a>
-        <div class="navbar-end">
-          <div class="navbar-item right">
-            <a href="hirings.html" class=" button is-info">
-              Hirings
-            </a>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="columns is-vcentered">
-          <div class="column is-5">
-            <figure class="image">
-              <img src="assets/img/main.png" alt="Description">
-            </figure>
-          </div>
-          <div class="column is-6 is-offset-1">
-            <h1 class="title is-2">
-                PUCIT Help Desk
-            </h1>
-            <h2 class="subtitle is-4">
-                Open Community around <a href="http://pucit.edu.pk">PUCIT</a>.
-            </h2>
-            <br>
-            <p class="has-text-centered">
-              <a class="button is-medium is-info" href="https://github.com/PUCITHD">
-                GitHub
-              </a>
-              <a class="button is-medium is-info is-outlined" href="https://fb.com/PUCITHelpDesk1">
-                Facebook
-              </a>
-            </p>
-          </div>
-        </div>
       </div>
     </div>
-
+  </nav>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="content">
+          <h1 class="heading">Hirings in PUCIT</h1>
+          <p>Societies in PUCIT are hiring now. They are looking for candidates like you. Apply now.</p>
+        </div>
+        <table class="table is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Sr.</th>
+                <th>Name</th>
+                <th>Society</th>
+                <th>Campus</th>
+                <th>Last Date</th>
+                <th>Facebook</th>
+                <th>Apply</th>
+              </tr>
+            </thead>
+            <tbody id="hirings">
+            </tbody>
+          </table>
+      </div>
+    </div>
     <div class="hero-foot">
       <div class="container">
         <div class="is-centered">
@@ -96,5 +89,7 @@
       </div>
     </div>
   </section>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/hirings.js"></script>
 </body>
 </html>

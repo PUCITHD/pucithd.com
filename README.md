@@ -40,13 +40,6 @@ This Website is hosted using [GitHub Pages](https://pages.github.com). Hence all
 
 * [Bulma](http://bulma.io) - a modern CSS framework based on Flexbox
 * [jQuery](http://jquery.org/) - minimal & feature-rich JavaScript library
-* [Vuejs](http://vuejs.org) - The Progressive JavaScript Framework
-
-*Vuejs in in long term roadmap
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Authors
@@ -58,9 +51,3 @@ See also the list of [contributors](https://github.com/PUCITHD/pucithd.com/contr
 ## License
 
 This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
