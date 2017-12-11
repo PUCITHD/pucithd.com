@@ -24,10 +24,10 @@ Say what the step will be
 git clone https://github.com/PUCITHD/pucithd.com.git
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Thats it. now you are ready to contribute towards open source.
 
 
-### Develpment
+### Development
 
 Code using basic concepts of HTML, CSS and JavaScript.
 After coding pull the code into master branch.
@@ -44,10 +44,11 @@ This Website is hosted using [GitHub Pages](https://pages.github.com). Hence all
 
 ## Authors
 
-* **Adil Aziz** - *initial work* - [adil13](https://github.com/adilj13)
+* [**Adil Aziz**](https://github.com/adilj13)
+* [**Saad Mehmood**](https://github.com/saadmehmood233)
 
 See also the list of [contributors](https://github.com/PUCITHD/pucithd.com/contributors) who participated in development of this project.
 
 ## License
 
-This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details.
