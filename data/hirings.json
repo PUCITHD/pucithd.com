@@ -1,20 +1,12 @@
 {
     "hirings": [
         {
-            "name": "Sports Society Hiring 2017-18",
-            "campus": "New",
-            "last_date": "December 18, 2017  23:59:59",
-            "link": "https://fiesta18.typeform.com/to/DORAZG",
-            "fb_event": "https://www.facebook.com/events/666552383552446/",
-            "by": "Sports Society New Campus"
-        },
-        {
-            "name": "Executive Body Hiring 2017-18",
+            "name": "Sports Society Coordinators Hiring 2017-18",
             "campus": "Old",
-            "last_date": "December 22, 2017  23:59:59",
-            "link": "https://goo.gl/forms/w6r0qZtsXlrn6YeE2",
-            "fb_event": "https://www.facebook.com/ComputerSociety.PUCIT/?",
-            "by": "Computer Society Old Campus"
+            "last_date": "December 30, 2017  23:59:59",
+            "link": "https://goo.gl/forms/PQHxhMw4OzSOCaof1",
+            "fb_event": "https://www.facebook.com/PucitSSOldCampus/",
+            "by": "Sports Society Old Campus"
         }
     ]
 }
