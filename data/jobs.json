@@ -9,7 +9,7 @@
             "apply_before": "January 31, 2018",
             "description":"Talented, highly-motivated, passionate Software Engineer. Want to be a part of fast paced learning environment? Sounds like we are talking about you? Apply now",
             "apply_link": "http://bit.ly/brainxHiringSE",
-            "skills":[],
+            "skills":["MySql", "PHP"],
             "company": {
                 "name":"BrainX Technologies",
                 "url":"https://www.brainxtech.com/"
