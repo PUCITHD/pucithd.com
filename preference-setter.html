@@ -183,13 +183,13 @@
         var request='https://api.pucithd.com/preference?'+result;
         console.log(request);
         $.getJSON(request, function(data) {
+            console.log(data);
             var resList='<ol>';
             for (let i = 0; i < data.length; i++) {
                 resList=resList+'<li>'+data[i]+'</li>';
             }
             resList=resList+'</ol>';
             $('#resBlock').html(resList);
-            console.log(data);
         });
   }
   $('#ques').html(questions[num].question);
