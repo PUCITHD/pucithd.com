@@ -180,7 +180,7 @@
   }
   function submit() {
     $('#quesBlock').hide();
-        var request='http://api.pucithd.com/preference?'+result;
+        var request='https://api.pucithd.com/preference?'+result;
         console.log(request);
         $.getJSON(request, function(data) {
             console.log(data);
