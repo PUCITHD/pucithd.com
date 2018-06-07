@@ -46,6 +46,8 @@ This Website is hosted using [GitHub Pages](https://pages.github.com). Hence all
 
 * [**Adil Aziz**](https://github.com/adilj13)
 * [**Saad Mehmood**](https://github.com/saadmehmood233)
+* [**Haseeb Azeem**](https://github.com/haseebazeem15)
+
 
 See also the list of [contributors](https://github.com/PUCITHD/pucithd.com/contributors) who participated in development of this project.
 
