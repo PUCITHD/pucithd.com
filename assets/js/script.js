@@ -19,7 +19,7 @@ $(".get-ag").click(function(){
       $(".agregate-msg").slideDown("slow");
       $(".msg-display").html("Your Final Aggregate for PUCIT is:");
       $(".msg").html("<b>"+agregate1+"</b>");
-      $(".goodluck").html("<b>Best of Luck :)</b>");
+      $(".goodluck").html("<div class='fb-share-button' data-href='http://pucithd.com/aggregate-calculator.html' data-layout='button_count' data-size='large' data-mobile-iframe='true'><a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpucithd.com%2Faggregate-calculator.html&amp;src=sdkpreparse' class='fb-xfbml-parse-ignore'>Share</a></div>");
       $(".back").html("<button class='button is-primary back-btn'>Return Back</button>");
   	}else{
   		
