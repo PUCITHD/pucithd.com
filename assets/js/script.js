@@ -1,3 +1,7 @@
+
+
+
+
 $(".get-ag").click(function(){
 
   	var totalMatric=$(".t-matric").val();
@@ -106,13 +110,130 @@ $(".get-ag").click(function(){
     $(".form2").slideUp("slow");
     $(".main-form").slideDown("slow");
    });
-   $(".continue").click(function(){
-    var degree=$(".deg").find(":selected").text();
-    if(degree=="BS Program"){
-      $(".main-form").slideUp("slow");
-      $(".form1").slideDown("slow");
-    }else{
-      $(".main-form").slideUp("slow");
-      $(".form2").slideDown("slow");
+$(".continue").click(function(){
+  var degree=$(".deg").find(":selected").text();
+  if(degree=="BS Program"){
+    $(".main-form").slideUp("slow");
+    $(".form1").slideDown("slow");
+  }else{
+    $(".main-form").slideUp("slow");
+    $(".form2").slideDown("slow");
+  }
+});
+
+
+//gpa calculator
+
+var count = $("#con").click(function abc() {
+    var invalid;
+    count = $("#count").val();
+    if(count.length<1)
+    {
+        alert('Please Enter No of Subjects')
     }
-   });
+    if (count > 0) {
+        $(".mainForm").fadeOut();
+        $(".newForm").fadeIn();
+        var count = $("#count").val();
+
+
+
+        if (count > 0) {
+            $('#tblbody').html("");
+            for (var i = 0; i < count; i++) {
+                var tr = $("<tr>");
+                var td1 = $("<td style=\"text-align: center\">");
+                var td2 = $("<td style=\"text-align: center\">");
+                td1.html("<input type='number' min='0' class='obtainedMarks'>").val;
+                td2.html("<input type='number' min='1'  class='creditHours'>").val;
+
+
+                tr.append(td1);
+                tr.append(td2);
+                $("#tblbody").append(tr);
+            }
+        }
+    }
+});
+
+
+
+$(".get-gpa").click(function () {
+
+
+    var count = $('.creditHours').length;
+
+    var invalid;
+    var gpa = 0.00;
+    var tsum = 0.00;
+    var sum = 0.00
+    var tchrs = 0;
+
+    for(var i=0;i<count;i++)
+    {
+        var marks=document.getElementsByClassName('obtainedMarks')[i];
+        var chrs=document.getElementsByClassName('creditHours')[i];
+
+        if((marks.value).length<1 || (chrs.value).length<1)
+        {
+            invalid=true;
+        }
+        if (marks.value >= 85 && marks.value <= 100) {
+            tsum = 4.0
+        } else if (marks.value >= 80 && marks.value < 85) {
+            tsum = 3.7;
+        } else if (marks.value >= 75 && marks.value < 80) {
+            tsum = 3.3;
+        } else if (marks.value >= 70 && marks.value < 75) {
+            tsum = 3.0;
+        } else if (marks.value >= 65 && marks.value < 70) {
+            tsum = 2.7;
+        } else if (marks.value >= 61 && marks.value < 65) {
+            tsum = 2.3;
+        } else if (marks.value >= 58 && marks.value < 61) {
+            tsum = 2.0;
+        } else if (marks.value >= 55 && marks.value < 58) {
+            tsum = 1.7;
+        } else if (marks.value >= 50 && marks.value < 55) {
+            tsum = 1.0;
+        } else if (marks.value < 50) {
+            tsum = 0.0;
+        }
+        sum = sum + (tsum * parseInt(chrs.value));
+        tchrs = tchrs +parseInt(chrs.value);
+
+    }
+    if(invalid==true)
+    {
+        alert("Please fill all the required fields.");
+    }
+    else
+    {
+        gpa = sum / parseFloat(tchrs);
+        $(".newForm").slideUp("slow");
+        $(".gpa-msg").slideDown("slow");
+        $(".msgDisplay").html("<h1>Your GPA is:</h1>");
+        $(".msg1").html("<b>"+gpa.toFixed(2)+"</b>");
+        $(".goodLuck").html("<b>Best of Luck :)</b>");
+        $(".back3").html("<button class='button is-primary back-btn'>Return Back</button>");
+
+    }
+
+
+
+
+});
+
+$(".goBack").click(function () {
+    $(".newForm").fadeOut();
+    $(".mainForm").fadeIn();
+})
+
+
+
+
+$(".back3").click(function(){
+    $(".gpa-msg").slideUp("slow");
+    $(".newForm").slideDown("slow");
+});
+
