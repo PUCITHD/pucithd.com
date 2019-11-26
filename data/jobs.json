@@ -1,18 +1,18 @@
 {
     "jobs": [
         {
-            "title": "Graphic Designer",
-            "location": "Zarrar Shaheed Road, Lahore",
-            "type":"Internship",
-            "positions":"n/a",
+            "title": "Fresh Graduate Software Engineers",
+            "location": "Lahore",
+            "type":"Full Time",
+            "positions":"7",
             "experience":"0 Years",
-            "apply_before": "Jun 15, 2019",
-            "description":"Requirements: Having a know how about Adobe software i.e adobe photoshop and illustrator. Timings: 10 am - 5pm ",
-            "apply_link": "mailto:career@petsaaltech.com?subject=Graphic Designer Internship",
-            "skills":["Adobe Photoshop", "Adobe Illustrator"],
+            "apply_before": "Dec 15, 2019",
+            "description":"Requirements: 4 years BS degree from renowned University - Strong programming & Analytical skills - Good understanding of Javascript & jQuery - Experience with Ruby on Rails will be a plus - Eager to learn new technologies - Must be a fast learner",
+            "apply_link": "mailto:devhassan.mahmood@gmail.com",
+            "skills":["JavaScript", "jQuery", "Ruby on Rails"],
             "company": {
-                "name":"PetSaal Technologies Private Limited",
-                "url":"http://petsaaltech.com"
+                "name":"BlackStack Software Solutions",
+                "url":"#"
             }
         }
     ]
