@@ -7,7 +7,7 @@
             "positions":"7",
             "experience":"0 Years",
             "apply_before": "Dec 15, 2019",
-            "description":"Requirements: 4 years BS degree from renowned University - Strong programming & Analytical skills - Good understanding of Javascript & jQuery - Experience with Ruby on Rails will be a plus - Eager to learn new technologies - Must be a fast learner",
+            "description":"Requirements: 4 years BS degree from renowned University - Strong programming & Analytical skills - Good understanding of Javascript & jQuery - Experience with Ruby on Rails will be a plus - Eager to learn new technologies - Must be a fast learner<br>Email subject line: 'Name - University - CGPA - Degree'.<br>All CVs without above format of subject line will be ignored.",
             "apply_link": "mailto:devhassan.mahmood@gmail.com",
             "skills":["JavaScript", "jQuery", "Ruby on Rails"],
             "company": {
