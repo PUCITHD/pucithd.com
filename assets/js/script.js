@@ -7,23 +7,20 @@ $(".get-ag").click(function(){
   	var totalMatric=$(".t-matric").val();
   	var matric=$(".matric").val();
   	var inter=$(".inter").val();
-  	var puTest=$(".pu").val();
+  	//var puTest=$(".pu").val();
   	var Hifz=$(".hifz").find(":selected").text();
-    if((totalMatric!="" || totalMatric!=" ") && (matric!="" || matric!=" ") && (inter!="" || inter!=" ") && (puTest!="" && puTest!=" ")){
+    if((totalMatric!="" || totalMatric!=" ") && (matric!="" || matric!=" ") && (inter!="" || inter!=" ")){
   	if(Hifz=="No Hifz-e-Quran"){
   		var interFull=1100; //1179/1375=60.02
   		var marksEarned=+1/4*matric+ +inter;
   		var TotalMarks=+1/4*totalMatric+ +interFull;
-  		var partA=70*(marksEarned/TotalMarks);
+  		var agregate1=100*(marksEarned/TotalMarks);
 
-      var puTestTotal=140;
-      var partB=30*(puTest/puTestTotal);
-      var agregate1=+partA + +partB;
       var year=$("#year").val();
         $(".form1").slideUp("slow");
         $(".agregate-msg").slideDown("slow");
             $(".msg-display").html("Your Morning Aggregate for PUCIT is:");
-            $(".msg").html("<b>"+(agregate1-2*(2019-parseInt(year))).toFixed(4)+"</b>");
+            $(".msg").html("<b>"+(agregate1-2*(2020-parseInt(year))).toFixed(4)+"</b>");
             $(".msgX-display").html("Your Afternoon Aggregate for PUCIT is:");
             $(".msgX").html("<b>"+(agregate1).toFixed(4)+"</b>");
         $(".goodluck").html("<div class='fb-share-button' data-href='http://pucithd.com/aggregate-calculator.html' data-layout='button_count' data-size='large' data-mobile-iframe='true'><a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpucithd.com%2Faggregate-calculator.html&amp;src=sdkpreparse' class='fb-xfbml-parse-ignore'>Share</a></div>");
@@ -34,16 +31,13 @@ $(".get-ag").click(function(){
       var hifz_marks=20;
       var marksEarned=+1/4*matric+ +inter +20;
       var TotalMarks=+1/4*totalMatric+ +interFull;
-      var parta=70*(marksEarned/TotalMarks);
+      var agregate2=100*(marksEarned/TotalMarks);
 
-      var puTestTotal=140;
-      var partb=30*(puTest/puTestTotal);
-      var agregate2=+parta + +partb;
         var year=$("#year").val();
       $(".form1").slideUp("slow");
       $(".agregate-msg").slideDown("slow");
         $(".msg-display").html("Your Morning Aggregate for PUCIT is:");
-        $(".msg").html("<b>"+(agregate2-2*(2019-parseInt(year))).toFixed(4)+"</b>");
+        $(".msg").html("<b>"+(agregate2-2*(2020-parseInt(year))).toFixed(4)+"</b>");
         $(".msgX-display").html("Your Afternoon Aggregate for PUCIT is:");
         $(".msgX").html("<b>"+(agregate2).toFixed(4)+"</b>");
       $(".goodluck").html("<b>Best of Luck :)</b>");
@@ -59,25 +53,22 @@ $(".get-ag").click(function(){
     var msinter=$(".ms-inter").val();
     var msbsc_total=$(".bsc-total-marks").val();
     var msbsc_obt=$(".bsc-obt-marks").val();
-    var mspuTestTotal=$(".ms-pu-total").val();
-    var mspuTest=$(".ms-pu").val();
     var msHifz=$(".ms-hifz").find(":selected").text();
     var year=$("#year2").val();
-    if((mstotalMatric!="" || mstotalMatric!=" ") && (msmatric!="" || msmatric!=" ") && (msinter!="" || msinter!=" ") && (mspuTest!="" || mspuTest!=" ") && (msbsc_total!="" || msbsc_total!=" ") && (msbsc_obt!="" || msbsc_obt!=" ")){
+    if((mstotalMatric!="" || mstotalMatric!=" ") && (msmatric!="" || msmatric!=" ") && (msinter!="" || msinter!=" ")  && (msbsc_total!="" || msbsc_total!=" ") && (msbsc_obt!="" || msbsc_obt!=" ")){
     if(msHifz=="No Hifz-e-Quran"){
       var interFull=1100; //1179/1375=60.02
       var marksEarned=+1/4*msmatric+ +1/5*msinter + +msbsc_obt;
       var TotalMarks=+1/4*mstotalMatric+ +1/5*interFull + +msbsc_total;
-      var partA=70*(marksEarned/TotalMarks);
+      var aggregate=100*(marksEarned/TotalMarks);
 
-      var partB=30*(mspuTest/mspuTestTotal);
-      var agregate=+partA + +partB;
+
       $(".form2").slideUp("slow");
       $(".agregate-msg").slideDown("slow");
       $(".msg-display").html("Your Morning Aggregate for PUCIT is:");
-      $(".msg").html("<b>"+(agregate-2*(2019-parseInt(year))).toFixed(4)+"</b>");
+      $(".msg").html("<b>"+(aggregate-2*(2020-parseInt(year))).toFixed(4)+"</b>");
         $(".msgX-display").html("Your Afternoon Aggregate for PUCIT is:");
-        $(".msgX").html("<b>"+agregate.toFixed(4)+"</b>");
+        $(".msgX").html("<b>"+aggregate.toFixed(4)+"</b>");
       $(".goodluck").html("<b>Best of Luck :)</b>");
       $(".back").css("display","none");
       $(".back2").html("<button class='button is-primary back-btn'>Return Back</button>");
@@ -86,17 +77,16 @@ $(".get-ag").click(function(){
       var interFull=1100; //1179/1375=61.04
       var marksEarned=+1/4*msmatric+ +1/5*msinter + +msbsc_obt + 20;
       var TotalMarks=+1/4*mstotalMatric+ +1/5*interFull + +msbsc_total;
-      var partA=70*(marksEarned/TotalMarks);
+      var aggregate=100*(marksEarned/TotalMarks);
 
-      var partB=30*(mspuTest/mspuTestTotal);
-      var agregate=+partA + +partB;
+
       var year=$("#year2").val();
       $(".form2").slideUp("slow");
       $(".agregate-msg").slideDown("slow");
       $(".msg-display").html("Your Morning Aggregate for PUCIT is:");
-      $(".msg").html("<b>"+(agregate-2*(2019-parseInt(year))).toFixed(4)+"</b>");
+      $(".msg").html("<b>"+(aggregate-2*(2019-parseInt(year))).toFixed(4)+"</b>");
         $(".msgX-display").html("Your Afternoon Aggregate for PUCIT is:");
-        $(".msgX").html("<b>"+agregate.toFixed(4)+"</b>");
+        $(".msgX").html("<b>"+aggregate.toFixed(4)+"</b>");
       $(".goodluck").html("<b>Best of Luck :)</b>");
       $(".back").css("display","none");
       $(".back2").html("<button class='button is-primary back-btn'>Return Back</button>");
