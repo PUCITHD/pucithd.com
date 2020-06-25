@@ -177,6 +177,7 @@ $(".get-gpa").click(function () {
 
     var invalid;
     var gpa = 0.00;
+    var invalidMarks = false;
     var tsum = 0.00;
     var sum = 0.00
     var tchrs = 0;
@@ -185,10 +186,14 @@ $(".get-gpa").click(function () {
     {
         var marks=document.getElementsByClassName('obtainedMarks')[i];
         var chrs=document.getElementsByClassName('creditHours')[i];
-
         if((marks.value).length<1 || (chrs.value).length<1)
         {
             invalid=true;
+            break;
+        }
+        if(marks.value >100  || marks.value < 0){
+            invalidMarks = true;
+            break;
         }
         if (marks.value >= 85 && marks.value <= 100) {
             tsum = 4.0
@@ -216,10 +221,10 @@ $(".get-gpa").click(function () {
 
     }
     if(invalid==true)
-    {
         alert("Please fill all the required fields.");
-    }
-    else
+    if (invalidMarks == true)
+        alert("Obtained Marks Must be from 0-100");
+    if(!invalid && !invalidMarks)
     {
         gpa = sum / parseFloat(tchrs);
         $(".newForm").slideUp("slow");
@@ -248,4 +253,3 @@ $(".back3").click(function(){
     $(".gpa-msg").slideUp("slow");
     $(".newForm").slideDown("slow");
 });
-
