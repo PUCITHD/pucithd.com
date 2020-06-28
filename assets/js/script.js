@@ -6,12 +6,13 @@ $(".get-ag").click(function(){
 
   	var totalMatric=$(".t-matric").val();
   	var matric=$(".matric").val();
-  	var inter=$(".inter").val();
+    var inter=$(".inter").val();
+    var totalInter = $(".t-inter").val();
   	//var puTest=$(".pu").val();
   	var Hifz=$(".hifz").find(":selected").text();
-    if((totalMatric!="" || totalMatric!=" ") && (matric!="" || matric!=" ") && (inter!="" || inter!=" ")){
+    if((totalMatric!="" || totalMatric!=" ") && (matric!="" || matric!=" ") && (inter!="" || inter!=" ")&& (totalInter!="" || totalInter!=" ")){
   	if(Hifz=="No Hifz-e-Quran"){
-  		var interFull=1100; //1179/1375=60.02
+  		var interFull=totalInter; //1179/1375=60.02
   		var marksEarned=+1/4*matric+ +inter;
   		var TotalMarks=+1/4*totalMatric+ +interFull;
   		var agregate1=100*(marksEarned/TotalMarks);
@@ -27,7 +28,7 @@ $(".get-ag").click(function(){
         $(".back").html("<button class='button is-primary back-btn'>Return Back</button>");
   	}else{
   		
-      var interFull=1100; //1179/1375=61.04
+      var interFull=totalInter; //1179/1375=61.04
       var hifz_marks=20;
       var marksEarned=+1/4*matric+ +inter +20;
       var TotalMarks=+1/4*totalMatric+ +interFull;
