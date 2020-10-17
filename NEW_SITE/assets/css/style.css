@@ -1,0 +1,104 @@
+/* PUCIT Help Desk - Website
+This is the main CSS file for this project */
+
+/*Screen Width with respective sizes
+xl: 1200px and greater
+lg: 992px to 1199px
+md: 768px to 991px
+sm: 576px to 767px
+xs: 575px and smaller*/
+
+/* ------------------------------------------------------------- */
+
+/* ------ Global Variables ------ */
+:root {
+  --main-background-color: #3d3d3d;
+  --main-foreground-color: #f1f2f6;
+  --sidebar-background-color: linear-gradient(90deg, rgba(220, 221, 225,1.0) 0%, rgba(245, 246, 250,1.0) 100%);
+  --sidebar-foreground-color: #000;
+  --links-color: #00cec9;
+  --links-hover-color: #00cec9;
+  --sidebar-width-lg: 500px;
+  --sidebar-width-md: 200px;
+  --sidebar-width-sm: 80px;
+}
+
+/* ------ Styling ------ */
+.sidebar {
+  background: var(--sidebar-background-color);
+  color: var(--sidebar-foreground-color);
+  height: 100%;
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  text-transform: uppercase;
+  justify-content: space-between;
+  box-shadow: 1px 0px 10px #000;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--main-background-color);
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  text-decoration: none;
+  color: var(--main-background-color);
+  font-weight: bold;
+  color: var(--links-hover-color);
+}
+
+.sidebar #logo {
+  margin: 30px 10px 50px;
+}
+
+.sidebar i:hover, .sidebar li:hover{
+  transform: scale(1.1);
+}
+
+.sidebar i {
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.sidebar-page-links {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+main {
+  background-color: var(--main-background-color);
+  color: var(--main-foreground-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+/* ------ Media Queries ------ */
+/* Extra Small */
+@media (max-width:575px) {}
+
+/* Small */
+@media (min-width:576px) and (max-width: 767px) {}
+
+/* Medium */
+@media (min-width:768px) and (max-width:991px) {}
+
+/* Large */
+@media (min-width:992px) and (max-width:1199px) {}
+
+/* Extra Large */
+@media (min-width:1200px) {}
