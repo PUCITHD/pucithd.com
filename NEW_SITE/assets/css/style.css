@@ -14,13 +14,15 @@ xs: 575px and smaller*/
 :root {
   --main-background-color: #3d3d3d;
   --main-foreground-color: #f1f2f6;
-  --sidebar-background-color: linear-gradient(90deg, rgba(220, 221, 225,1.0) 0%, rgba(245, 246, 250,1.0) 100%);
+  --sidebar-background-color: linear-gradient(90deg, rgba(220, 221, 225, 1.0) 0%, rgba(245, 246, 250, 1.0) 100%);
   --sidebar-foreground-color: #000;
   --links-color: #00cec9;
   --links-hover-color: #00cec9;
-  --sidebar-width-lg: 500px;
+  --sidebar-width-xl: 100px;
+  --sidebar-width-lg: 88px;
   --sidebar-width-md: 200px;
   --sidebar-width-sm: 80px;
+  --sidebar-width-xs: 80px;
 }
 
 /* ------ Styling ------ */
@@ -30,52 +32,50 @@ xs: 575px and smaller*/
   height: 100%;
   z-index: 1;
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   overflow: hidden;
   left: 0;
   top: 0;
   text-transform: uppercase;
-  justify-content: space-between;
   box-shadow: 1px 0px 10px #000;
+  display: grid;
+  justify-content: center;
 }
 
-.sidebar a {
-  text-decoration: none;
-  color: var(--main-background-color);
-  font-weight: bold;
+.social-media-list {
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  margin-bottom: 100px;
 }
 
+.sidebar a,
 .sidebar a:hover {
   text-decoration: none;
   color: var(--main-background-color);
   font-weight: bold;
-  color: var(--links-hover-color);
+  margin-bottom: 20px;
 }
 
-.sidebar #logo {
-  margin: 30px 10px 50px;
+.fa-facebook:hover {
+  color: #3b5998;
 }
 
-.sidebar i:hover, .sidebar li:hover{
-  transform: scale(1.1);
+.fa-users:hover {
+  color: #3b5998;
 }
 
-.sidebar i {
-  font-size: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.fa-github:hover {
+  color: #000000;
 }
 
-.sidebar li {
-  list-style-type: none;
-  text-align: center;
+.fa-instagram:hover {
+  background: -webkit-linear-gradient(-130deg, #515BD4, #8134AF, #DD2A7B, #FEDA77, #F58529);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.sidebar-page-links {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.fa-linkedin:hover {
+  color: #0e76a8;
 }
 
 main {
@@ -84,21 +84,105 @@ main {
   width: 100%;
   height: 100%;
   position: absolute;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
 }
 
 
 /* ------ Media Queries ------ */
 /* Extra Small */
-@media (max-width:575px) {}
+@media (max-width:576px) {
+  .sidebar {
+    grid-template-rows: 80px auto;
+  }
+
+  .sidebar #logo {
+    max-width: 50px;
+  }
+
+  .sidebar i {
+    font-size: 24px;
+  }
+
+  .sidebar #logo {
+    margin: 8px 2px 0px;
+  }
+}
 
 /* Small */
-@media (min-width:576px) and (max-width: 767px) {}
+@media (min-width:576px) and (max-width: 768px) {
+  .sidebar {
+    grid-template-rows: 90px auto;
+  }
+
+  .sidebar #logo {
+    max-width: 65px;
+  }
+
+  .sidebar i {
+    font-size: 28px;
+  }
+
+  .sidebar #logo {
+    margin: 8px 1px 0px;
+  }
+}
 
 /* Medium */
-@media (min-width:768px) and (max-width:991px) {}
+@media (min-width:768px) and (max-width:992px) {
+  .sidebar {
+    grid-template-rows: 100px auto;
+  }
+
+  .sidebar #logo {
+    max-width: 75px;
+  }
+
+  .sidebar i {
+    font-size: 34px;
+  }
+
+  .sidebar #logo {
+    margin: 10px 4px 0px;
+  }
+}
 
 /* Large */
-@media (min-width:992px) and (max-width:1199px) {}
+@media (min-width:992px) and (max-width:1200px) {
+  .sidebar {
+    grid-template-rows: 115px auto;
+  }
+
+  .sidebar #logo {
+    max-width: 80px;
+  }
+
+  .sidebar i {
+    font-size: 40px;
+  }
+
+  .sidebar #logo {
+    margin: 8px 4px 0px;
+  }
+}
 
 /* Extra Large */
-@media (min-width:1200px) {}
+@media (min-width:1200px) {
+  .sidebar {
+    grid-template-rows: 130px auto;
+  }
+
+  .sidebar #logo {
+    max-width: 90px;
+  }
+
+  .sidebar i {
+    font-size: 45px;
+  }
+
+  .sidebar #logo {
+    margin: 10px 5px 0px;
+  }
+}
