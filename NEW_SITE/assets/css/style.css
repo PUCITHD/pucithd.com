@@ -18,14 +18,39 @@ xs: 575px and smaller*/
   --sidebar-foreground-color: #000;
   --links-color: #00cec9;
   --links-hover-color: #00cec9;
-  --sidebar-width-xl: 100px;
-  --sidebar-width-lg: 88px;
-  --sidebar-width-md: 200px;
-  --sidebar-width-sm: 80px;
-  --sidebar-width-xs: 80px;
+  --sidebar-max-width-xl: 90px;
+  --sidebar-max-width-lg: 80px;
+  --sidebar-max-width-md: 75px;
+  --sidebar-max-width-sm: 65px;
+  --sidebar-max-width-xs: 50;
 }
 
+/* External Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montaga&family=Montserrat:wght@300;400&display=swap');
+
 /* ------ Styling ------ */
+/* font classes start */
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-montserrat-light {
+  font-family: 'Montserrat Light', sans-serif;
+}
+
+.font-montaga {
+  font-family: 'Montaga', serif;
+
+}
+
+.font-ibm-plex-sans {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* font classes end */
+
+
+
 .sidebar {
   background: var(--sidebar-background-color);
   color: var(--sidebar-foreground-color);
@@ -54,6 +79,10 @@ xs: 575px and smaller*/
   color: var(--main-background-color);
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.sidebar #logo {
+  margin: 10px 4px 0px;
 }
 
 .fa-facebook:hover {
@@ -94,6 +123,11 @@ main {
 /* ------ Media Queries ------ */
 /* Extra Small */
 @media (max-width:576px) {
+  main {
+    /*sidebar margin*/
+    padding-left: calc(var(--sidebar-max-width-sm) + 16px);
+  }
+
   .sidebar {
     grid-template-rows: 80px auto;
   }
@@ -103,16 +137,17 @@ main {
   }
 
   .sidebar i {
-    font-size: 24px;
-  }
-
-  .sidebar #logo {
-    margin: 8px 2px 0px;
+    font-size: 26px;
   }
 }
 
 /* Small */
 @media (min-width:576px) and (max-width: 768px) {
+  main {
+    /*sidebar margin*/
+    padding-left: calc(var(--sidebar-max-width-sm) + 16px);
+  }
+
   .sidebar {
     grid-template-rows: 90px auto;
   }
@@ -122,16 +157,17 @@ main {
   }
 
   .sidebar i {
-    font-size: 28px;
-  }
-
-  .sidebar #logo {
-    margin: 8px 1px 0px;
+    font-size: 32px;
   }
 }
 
 /* Medium */
 @media (min-width:768px) and (max-width:992px) {
+  main {
+    /*sidebar margin*/
+    padding-left: calc(var(--sidebar-max-width-md) + 16px);
+  }
+
   .sidebar {
     grid-template-rows: 100px auto;
   }
@@ -141,16 +177,17 @@ main {
   }
 
   .sidebar i {
-    font-size: 34px;
-  }
-
-  .sidebar #logo {
-    margin: 10px 4px 0px;
+    font-size: 38px;
   }
 }
 
 /* Large */
 @media (min-width:992px) and (max-width:1200px) {
+  main {
+    /*sidebar margin*/
+    padding-left: calc(var(--sidebar-max-width-lg) + 16px);
+  }
+
   .sidebar {
     grid-template-rows: 115px auto;
   }
@@ -162,14 +199,15 @@ main {
   .sidebar i {
     font-size: 40px;
   }
-
-  .sidebar #logo {
-    margin: 8px 4px 0px;
-  }
 }
 
 /* Extra Large */
 @media (min-width:1200px) {
+  main {
+    /*sidebar margin*/
+    padding-left: calc(var(--sidebar-max-width-xl) + 16px);
+  }
+
   .sidebar {
     grid-template-rows: 130px auto;
   }
@@ -180,9 +218,5 @@ main {
 
   .sidebar i {
     font-size: 45px;
-  }
-
-  .sidebar #logo {
-    margin: 10px 5px 0px;
   }
 }
