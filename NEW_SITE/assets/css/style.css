@@ -43,18 +43,26 @@ xs: 575px and smaller*/
 
 }
 
-.font-ibm-plex-sans {
-  font-family: 'IBM Plex Sans', sans-serif;
+.font-raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* font classes end */
 
 
+body {
+  height: 100%;
+}
+
 .sidebar {
   background: var(--sidebar-background-color);
   color: var(--sidebar-foreground-color);
   height: 100%;
-  z-index: 1;
+  z-index: 0;
   position: fixed;
   left: 0;
   top: 0;
@@ -110,6 +118,7 @@ main {
   color: var(--main-foreground-color);
   width: 100%;
   height: 100%;
+  z-index: -1;
   position: absolute;
   background-image: url("../img/bg.jpg");
   background-size: cover;
@@ -117,17 +126,72 @@ main {
   background-position: center center;
 }
 
+.bottom-container {
+  width: auto;
+  margin: auto;
+}
+
+.x-dev-img {
+  display: block;
+  width: auto;
+  margin: auto;
+}
+
+button {
+  outline: none;
+}
+
+.bttn-unite {
+  width: 80%;
+  outline: none;
+  padding: 3px 0px;
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: var(--main-foreground-color);
+  margin-bottom: 10px;
+}
+
+footer {
+  text-shadow: 0px 0px 2px white;
+}
+
+.welcome-heading {
+  text-shadow: 0px 0px 4px lightcyan;
+}
+
+.blog-box { 
+  border: 4px solid white;
+  padding: 2px;
+  width: 85%;
+  margin-top: 30px;
+}
+
+.blog-box:hover {
+  background-color: black;
+  text-shadow: 0px 0px 2px white;
+}
+
+.blog-box>strong {
+  font-size: 1.8em;
+}
+
+
 
 /* ------ Media Queries ------ */
 /* Extra Small */
 @media (max-width:576px) {
   .welcome-heading {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
   main {
     /*sidebar margin*/
-    padding-left: calc(var(--sidebar-max-width-sm));
+    padding-left: calc(var(--sidebar-max-width-sm) - 9px);
   }
 
   .sidebar {
@@ -148,6 +212,32 @@ main {
 
   #featured-slider-container>div>span {
     font-size: 20px;
+  }
+
+  .x-dev-img {
+    width: 90px;
+  }
+
+  .calculator-btns button {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  footer {
+    padding-left: var(--sidebar-max-width-xs + 20px);
+  }
+
+  .calculator-btns {
+    margin-top: 30px;
+  }
+
+  .blog-box>strong {
+    font-size: 1.2em;
+  }
+
+  .blog-box {
+    font-size: 0.8em;
   }
 }
 
@@ -181,6 +271,10 @@ main {
   #featured-slider-container>div>span {
     font-size: 23px;
   }
+
+  footer {
+    padding-left: var(--sidebar-max-width-sm);
+  }
 }
 
 /* Medium */
@@ -212,6 +306,10 @@ main {
 
   #featured-slider-container>div>span {
     font-size: 30px;
+  }
+
+  footer {
+    padding-left: var(--sidebar-max-width-md);
   }
 }
 
@@ -245,6 +343,10 @@ main {
   #featured-slider-container>div>span {
     font-size: 40px;
   }
+
+  footer {
+    padding-left: var(--sidebar-max-width-lg);
+  }
 }
 
 /* Extra Large */
@@ -276,5 +378,9 @@ main {
 
   #featured-slider-container>div>span {
     font-size: 40px;
+  }
+
+  footer {
+    padding-left: var(--sidebar-max-width-xl);
   }
 }
