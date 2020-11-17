@@ -23,6 +23,11 @@ xs: 575px and smaller*/
   --sidebar-max-width-md: 75px;
   --sidebar-max-width-sm: 60px;
   --sidebar-max-width-xs: 50;
+  --font-size-xs:20px;
+  --font-size-sm:30px;
+  --font-size-md:30px;
+  --font-size-lg:35px;
+  --font-size-xl:40px;
 }
 
 /* External Fonts Import */
@@ -115,20 +120,93 @@ main {
   background-size: cover;
   background-repeat: none;
   background-position: center center;
+
+
 }
 
+input{
+    text-align: center;
+    width: 40%;
+    padding: 12px;
+    border-radius: 15px;
+    margin-left: auto;
+    box-sizing: border-box;
+  }
+  input[type=text] , select{
+    text-align: center;
+    width: 40%;
+    padding: 12px;
+    border-radius: 15px;
+    margin-left: auto;
+    box-sizing: border-box;
+  }
+  input[type=submit] {
+    text-align: center;
+    margin: auto;
+    padding: 12px; 
+    box-sizing: border-box;
+    width: 15%;
+}
+input[type=submit]:hover {
+    text-align: center;
+    margin: auto;
+
+    padding: 12px; 
+    background-color: #45a049;
+    width: 15%;
+}
+
+  .welcome-heading{
+    margin-top: 70px;
+
+  }
+  .form{
+    margin-left: 200px;
+   margin-right:100px;
+  }
+  /*.linebreak{
+    
+  }*/
+body{
+  text-align: center;
+}
 
 /* ------ Media Queries ------ */
 /* Extra Small */
 @media (max-width:576px) {
-  .welcome-heading {
-    font-size: 1.1em;
-  }
-
+ 
   main {
     /*sidebar margin*/
-    padding-left: calc(var(--sidebar-max-width-sm));
+   padding-left: calc(var(--sidebar-max-width-sm));
+   margin-left: 50px;
   }
+
+  input{
+    width: 100%;
+
+  }
+
+  input[type=text] , select{
+     width: 100%;
+  }
+
+  input[type=submit]{
+    width: 45%;
+    font-size: 10px;
+    padding-left: 0px;
+  } 
+
+  input[type=submit]:hover{
+    width: 45%;
+    font-size: 10px;
+  }
+
+   .welcome-heading {
+    font-size: calc(var(--font-size-xs));
+     margin-left: -95px; 
+  }
+
+  
 
   .sidebar {
     grid-template-rows: 80px auto;
@@ -149,19 +227,44 @@ main {
   #featured-slider-container>div>span {
     font-size: 20px;
   }
+  .form{
+    margin-left: 10%;
+    
+  }
 }
 
 /* Small */
 @media (min-width:576px) and (max-width: 768px) {
-  .welcome-heading {
-    font-size: 1.6em;
-  }
 
   main {
     /*sidebar margin*/
-    padding-left: calc(var(--sidebar-max-width-sm) + 20px);
+    padding-left: calc(var(--sidebar-max-width-sm) - 40px);
   }
 
+  input{
+    width: 100%;
+    margin-left:  -20%;
+  }
+
+  input[type=text] , select{
+     width: 100%;
+     margin-left:  -20%;
+  }
+
+  input[type=submit]{
+    width: 50%;
+  } 
+
+  input[type=submit]:hover{
+    width: 50%;
+  }
+
+   .welcome-heading {
+    font-size: calc(var(--font-size-sm));
+    margin-left: 10%;
+  }
+
+ 
   .sidebar {
     grid-template-rows: 90px auto;
   }
@@ -185,15 +288,26 @@ main {
 
 /* Medium */
 @media (min-width:768px) and (max-width:992px) {
-  .welcome-heading {
-    font-size: 1.7em;
-  }
-
+  
   main {
     /*sidebar margin*/
-    padding-left: calc(var(--sidebar-max-width-md) + 16px);
+    padding-left: calc(var(--sidebar-max-width-md) - 50%);
   }
 
+  input[type=submit]{
+    width: 35%;
+  } 
+
+  input[type=submit]:hover{
+    width: 35%;
+  }
+
+   .welcome-heading {
+    font-size: calc(var(--font-size-md));
+     margin-left: 10%;
+  }
+
+ 
   .sidebar {
     grid-template-rows: 100px auto;
   }
@@ -217,14 +331,24 @@ main {
 
 /* Large */
 @media (min-width:992px) and (max-width:1200px) {
-  .welcome-heading {
-    font-size: 1.9em;
-  }
+  
 
   main {
     /*sidebar margin*/
-    padding-left: calc(var(--sidebar-max-width-lg) + 16px);
+    padding-left: calc(var(--sidebar-max-width-lg) - 50%);
   }
+input[type=submit]{
+    width: 25%;
+  } 
+
+  input[type=submit]:hover{
+    width: 25%;
+  }
+
+   .welcome-heading {
+    font-size: calc(var(--font-size-lg));
+     margin-left: 10%;  }
+
 
   .sidebar {
     grid-template-rows: 115px auto;
@@ -249,13 +373,23 @@ main {
 
 /* Extra Large */
 @media (min-width:1200px) {
-  .welcome-heading {
-    font-size: 2em;
-  }
+   
 
   main {
     /*sidebar margin*/
-    padding-left: calc(var(--sidebar-max-width-xl) + 16px);
+    padding-right: calc(var(--sidebar-max-width-xl) -50%);
+  }
+
+input[type=submit]{
+    width: 25%;
+  } 
+
+  input[type=submit]:hover{
+    width: 25%;
+  }
+  .welcome-heading {
+    font-size: calc(var(--font-size-xl));
+    margin-left: 10%;
   }
 
   .sidebar {
