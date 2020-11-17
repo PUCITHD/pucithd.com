@@ -133,7 +133,7 @@ input{
     box-sizing: border-box;
   }
   input[type=text] , select{
-    text-align: center;
+    text-align: center; 
     width: 40%;
     padding: 12px;
     border-radius: 15px;
@@ -243,12 +243,12 @@ body{
 
   input{
     width: 100%;
-    margin-left:  -20%;
+    
   }
 
   input[type=text] , select{
      width: 100%;
-     margin-left:  -20%;
+     
   }
 
   input[type=submit]{
@@ -295,11 +295,11 @@ body{
   }
 
   input[type=submit]{
-    width: 35%;
+    width: 20%;
   } 
 
   input[type=submit]:hover{
-    width: 35%;
+    width: 20%;
   }
 
    .welcome-heading {
