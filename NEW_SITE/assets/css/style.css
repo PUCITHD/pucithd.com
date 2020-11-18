@@ -23,11 +23,6 @@ xs: 575px and smaller*/
   --sidebar-max-width-md: 75px;
   --sidebar-max-width-sm: 60px;
   --sidebar-max-width-xs: 50;
-  --font-size-xs: 23px;
-  --font-size-sm: 30px;
-  --font-size-md: 30px;
-  --font-size-lg: 35px;
-  --font-size-xl: 40px;
 }
 
 /* External Fonts Import */
@@ -129,118 +124,6 @@ main {
   background-size: cover;
   background-repeat: none;
   background-position: center center;
-
-
-}
-
-input {
-  text-align: center;
-  width: 40%;
-  padding: 12px;
-  border-radius: 15px;
-  margin-left: auto;
-  box-sizing: border-box;
-}
-
-input[type=text],
-select {
-  text-align: center;
-  width: 40%;
-  padding: 12px;
-  border-radius: 15px;
-  margin-left: auto;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  text-align: center;
-  margin: auto;
-  padding: 12px;
-  box-sizing: border-box;
-  width: 15%;
-}
-
-input[type=submit]:hover {
-  text-align: center;
-  margin: auto;
-  padding: 12px;
-  background-color: #45a049;
-  width: 15%;
-}
-
-.form {
-  margin-left: 200px;
-  margin-right: 100px;
-}
-
-.box {
-  background-color: white;
-  width: 300px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-top: 10px;
-  border-radius: 25px;
-  color: black;
-  margin: auto;
-}
-
-.sem-num {
-  font-size: 30px;
-}
-
-/* The container */
-.container {
-  display: block;
-  position: relative;
-
-
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default radio button */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* Create a custom radio button */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input~.checkmark {
-  background-color: #ccc;
-}
-
-/* When the radio button is checked, add a black background */
-.container input:checked~.checkmark {
-  background-color: black;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.container input:checked~.checkmark:after {
-  display: block;
 }
 
 .bottom-container {
@@ -281,7 +164,7 @@ footer {
   text-shadow: 0px 0px 4px lightcyan;
 }
 
-.blog-box {
+.blog-box { 
   border: 4px solid white;
   padding: 2px;
   width: 85%;
@@ -309,44 +192,6 @@ footer {
   main {
     /*sidebar margin*/
     padding-left: calc(var(--sidebar-max-width-sm) - 9px);
-  }
-
-  input {
-    width: 100%;
-
-  }
-
-  input[type=text],
-  select {
-    width: 100%;
-  }
-
-  input[type=submit] {
-    width: 45%;
-    font-size: 10px;
-    padding-left: 7px;
-  }
-
-  input[type=submit]:hover {
-    width: 45%;
-    font-size: 10px;
-  }
-
-  .welcome-heading {
-    font-size: calc(var(--font-size-xs));
-    margin-left: -95px;
-  }
-
-  .sem-num {
-    font-size: 25px;
-  }
-
-  .container {
-    font-size: 17px;
-  }
-
-  .box {
-    width: 80%;
   }
 
   .sidebar {
@@ -398,50 +243,13 @@ footer {
 
 /* Small */
 @media (min-width:576px) and (max-width: 768px) {
+  .welcome-heading {
+    font-size: 1.6em;
+  }
 
   main {
     /*sidebar margin*/
-    padding-left: calc(var(--sidebar-max-width-sm) - 40px);
-  }
-
-  input {
-    width: 100%;
-
-  }
-
-  input[type=text],
-  select {
-    width: 100%;
-
-  }
-
-  input[type=submit] {
-    width: 50%;
-  }
-
-  input[type=submit]:hover {
-    width: 50%;
-  }
-
-  .welcome-heading {
-    font-size: calc(var(--font-size-sm));
-    margin-left: 10%;
-  }
-
-  .box {
-    width: 70%;
-  }
-
-  .sem-num {
-    font-size: 30px;
-  }
-
-  .container {
-    font-size: 23px;
-  }
-
-  .box {
-    width: 80%;
+    padding-left: calc(var(--sidebar-max-width-sm) + 20px);
   }
 
   .sidebar {
@@ -471,35 +279,13 @@ footer {
 
 /* Medium */
 @media (min-width:768px) and (max-width:992px) {
+  .welcome-heading {
+    font-size: 1.7em;
+  }
 
   main {
     /*sidebar margin*/
-    padding-left: calc(var(--sidebar-max-width-md) - 50%);
-  }
-
-  input[type=submit] {
-    width: 30%;
-  }
-
-  input[type=submit]:hover {
-    width: 30%;
-  }
-
-  .welcome-heading {
-    font-size: calc(var(--font-size-md));
-    margin-left: 10%;
-  }
-
-  .sem-num {
-    font-size: 28px;
-  }
-
-  .container {
-    font-size: 20px;
-  }
-
-  .box {
-    width: 70%;
+    padding-left: calc(var(--sidebar-max-width-md) + 16px);
   }
 
   .sidebar {
@@ -529,38 +315,14 @@ footer {
 
 /* Large */
 @media (min-width:992px) and (max-width:1200px) {
-
+  .welcome-heading {
+    font-size: 1.9em;
+  }
 
   main {
     /*sidebar margin*/
-    padding-left: calc(var(--sidebar-max-width-lg) - 50%);
+    padding-left: calc(var(--sidebar-max-width-lg) + 16px);
   }
-
-  input[type=submit] {
-    width: 25%;
-  }
-
-  input[type=submit]:hover {
-    width: 25%;
-  }
-
-  .welcome-heading {
-    font-size: calc(var(--font-size-lg));
-    margin-left: 10%;
-  }
-
-  .sem-num {
-    font-size: 30px;
-  }
-
-  .container {
-    font-size: 23px;
-  }
-
-  .box {
-    width: 60%;
-  }
-
 
   .sidebar {
     grid-template-rows: 115px auto;
@@ -589,29 +351,13 @@ footer {
 
 /* Extra Large */
 @media (min-width:1200px) {
-  input[type=submit] {
-    width: 30%;
-  }
-
-  input[type=submit]:hover {
-    width: 30%;
-  }
-
   .welcome-heading {
-    font-size: calc(var(--font-size-xl));
-    margin-left: 10%;
+    font-size: 2em;
   }
 
-  .sem-num {
-    font-size: 30px;
-  }
-
-  .container {
-    font-size: 23px;
-  }
-
-  .box {
-    width: 50%;
+  main {
+    /*sidebar margin*/
+    padding-left: calc(var(--sidebar-max-width-xl) + 16px);
   }
 
   .sidebar {
