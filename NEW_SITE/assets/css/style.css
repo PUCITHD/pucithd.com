@@ -23,7 +23,7 @@ xs: 575px and smaller*/
   --sidebar-max-width-md: 75px;
   --sidebar-max-width-sm: 60px;
   --sidebar-max-width-xs: 50;
-  --font-size-xs:20px;
+  --font-size-xs:23px;
   --font-size-sm:30px;
   --font-size-md:30px;
   --font-size-lg:35px;
@@ -164,9 +164,84 @@ input[type=submit]:hover {
     margin-left: 200px;
    margin-right:100px;
   }
-  /*.linebreak{
-    
-  }*/
+
+  .box{
+    background-color: white;
+    width:300px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    border-radius: 25px;
+    color:black;
+    margin: auto;
+  }
+  .sem-num{
+    font-size: 30px;
+     }
+  /* The container */
+.container {
+  display: block;
+  position: relative;
+  
+ 
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a black background */
+.container input:checked ~ .checkmark {
+  background-color: black;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
 body{
   text-align: center;
 }
@@ -193,7 +268,7 @@ body{
   input[type=submit]{
     width: 45%;
     font-size: 10px;
-    padding-left: 0px;
+    padding-left: 7px;
   } 
 
   input[type=submit]:hover{
@@ -206,7 +281,17 @@ body{
      margin-left: -95px; 
   }
 
-  
+  .sem-num{
+    font-size: 25px;
+  }
+
+  .container{
+    font-size: 17px;
+  }
+
+  .box{
+    width: 80%;
+  } 
 
   .sidebar {
     grid-template-rows: 80px auto;
@@ -264,7 +349,22 @@ body{
     margin-left: 10%;
   }
 
- 
+  .box{
+    width: 70%;
+  } 
+
+  .sem-num{
+    font-size: 30px;
+  }
+
+  .container{
+    font-size: 23px;
+  }
+  
+  .box{
+    width: 80%;
+  } 
+
   .sidebar {
     grid-template-rows: 90px auto;
   }
@@ -295,19 +395,29 @@ body{
   }
 
   input[type=submit]{
-    width: 20%;
+    width: 30%;
   } 
 
   input[type=submit]:hover{
-    width: 20%;
+    width: 30%;
   }
 
    .welcome-heading {
     font-size: calc(var(--font-size-md));
      margin-left: 10%;
   }
+  .sem-num{
+    font-size: 28px;
+  }
 
- 
+  .container{
+    font-size: 20px;
+  }
+  
+  .box{
+    width: 70%;
+  } 
+
   .sidebar {
     grid-template-rows: 100px auto;
   }
@@ -349,6 +459,18 @@ input[type=submit]{
     font-size: calc(var(--font-size-lg));
      margin-left: 10%;  }
 
+  .sem-num{
+    font-size: 30px;
+  }
+
+  .container{
+    font-size: 23px;
+  }
+  
+  .box{
+    width: 60%;
+  } 
+
 
   .sidebar {
     grid-template-rows: 115px auto;
@@ -381,16 +503,28 @@ input[type=submit]{
   }
 
 input[type=submit]{
-    width: 25%;
+    width: 30%;
   } 
 
   input[type=submit]:hover{
-    width: 25%;
+    width: 30%;
   }
   .welcome-heading {
     font-size: calc(var(--font-size-xl));
     margin-left: 10%;
   }
+
+ .sem-num{
+    font-size: 30px;
+  }
+
+  .container{
+    font-size: 23px;
+  }
+  
+  .box{
+    width: 50%;
+  } 
 
   .sidebar {
     grid-template-rows: 130px auto;
