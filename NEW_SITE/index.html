@@ -24,20 +24,19 @@
   <div class="sidebar">
     <a href="./index.html"><img src="./assets/img/logo-main.png" alt="pucit-help-desk-logo" id="logo"></a>
     <div class="social-media-list">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fas fa-users"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/PUCIT.HD"><i class="fab fa-facebook"></i></a>
+      <a href="https://facebook.com/groups/PUCITHelpDesk"><i class="fas fa-users"></i></a>
+      <a href="https://github.com/PUCITHD"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/pucithelpdesk"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/pucithelpdesk"><i class="fab fa-linkedin"></i></a>
     </div>
   </div>
+  <div id="particles-js"></div>
 
   <main>
-    <!-- MAIN CONTENT HERE -->
     <div class="text-center font-montaga welcome-heading">Welcome to <strong>PUCIT Help Desk</strong></div>
     <div id="featured-slider-container">
-      <div class="text-uppercase font-montserrat" style="font-weight: bold;"><span>| </span>featured
-      </div>
+      <div class="text-uppercase font-montserrat" style="font-weight: bold;"><span>| </span>featured </div>
       <!-- SLIDER TILES -->
       <div class="owl-carousel">
         <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
@@ -50,43 +49,37 @@
         <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
         <!-- MAKE A TILE AND ADD IT  HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
         <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-        <!--sample tile-->
       </div>
-    </div>
-
-    <!-- Bottom row of pucitx pucitdev calculators and blog -->
+    </div><!-- Bottom row of pucitx pucitdev calculators and blog -->
     <div class="row bottom-container container-fluid">
       <!-- pucitx and pucitdev -->
       <div class="col-12 col-lg-4 d-flex flex-row flex-lg-column justify-content-around">
-        <div>
-          <img src="assets/img/pucitx.png" class="x-dev-img" alt="pucitx">
+        <div style="cursor: pointer;" onclick="launchPucitX();"> <img src="assets/img/pucitx.png" class="x-dev-img"
+            alt="pucitx">
           <p style="text-align: center" class="d-none d-md-block">Free Online Courses</p>
         </div>
-
-        <div>
-          <img src="assets/img/pucitdev.png" class="x-dev-img" alt="pucitdev">
+        <div style="cursor: pointer;" onclick="launchPucitDev();"> <img src="assets/img/pucitdev.png" class="x-dev-img"
+            alt="pucitdev">
           <p style="text-align: center" class="d-none d-md-block">Projects Showcase</p>
         </div>
-      </div>
-      <!-- calculators -->
+      </div> <!-- calculators -->
       <div class="col-lg-4 col-12 font-roboto calculator-btns d-flex flex-row flex-lg-column justify-content-around">
-        <button class="bttn-unite bttn-md bttn-primary" onclick="fetchCalculatorModules(0);"><i class="fas fa-calculator"></i><br>Aggregate</button>
-        <button class="bttn-unite bttn-md bttn-primary" onclick="fetchCalculatorModules(1);"><i class="fas fa-calculator"></i><br>GPA</button>
-        <button class="bttn-unite bttn-md bttn-primary" onclick="fetchCalculatorModules(2);"><i class="fas fa-calculator"></i><br>CGPA</button>
-      </div>
-      <!-- blog -->
+        <button class="bttn-unite bttn-md bttn-primary" onclick="launchAggCalc();"><i
+            class="fas fa-calculator"></i><br>Aggregate</button> <button class="bttn-unite bttn-md bttn-primary"
+          onclick="launchGpaCalc();"><i class="fas fa-calculator"></i><br>GPA</button> <button
+          class="bttn-unite bttn-md bttn-primary" onclick="launchCgpaCalc();"><i
+            class="fas fa-calculator"></i><br>CGPA</button> </div> <!-- blog -->
       <div class="col-lg-4 col-12 d-flex justify-content-center">
-        <div class="blog-box text-center">
-          <strong style="font-family: 'Raleway';">PUCIT BLOG</strong>
-          <p>Community of PUCITians to share thoughts through articles and blogs to collaborate on ideas and innovate productive things 🤍</p>
+        <div class="blog-box text-center" style="cursor: pointer;" onclick="launchBlog();"> <strong
+            class="font-raleway">PUCIT BLOG</strong>
+          <p>Community of PUCITians to share thoughts through articles and blogs to collaborate on ideas and innovate
+            productive things 🤍</p>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="font-raleway">
-    Copyright &copy; PUCIT Help Desk 2020
-  </footer>
+  <footer class="font-raleway"></footer>
 
 
   <!-- JAVASCRIPT Start -->
@@ -142,6 +135,22 @@
   </script>
   <script src="assets/js/anime.min.js"></script>
   <script src="assets/js/script.js"></script>
+  <script>
+    //footer
+    var curDate = new Date();
+    document.getElementsByTagName("footer")[0].textContent = String("Copyright © PUCIT Help Desk " + curDate
+      .getFullYear());
+  </script>
+  <script>
+    window.onload = changeBgImage;
+    const noOfBgImgs = 5;
+    function changeBgImage() {
+      document.getElementsByTagName("body")[0].style.background = 'url("./assets/img/bg_img/' + (Math.floor(Math
+        .random() * 10) % noOfBgImgs) + '.jpg") repeat center center fixed';
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="./assets/js/particlejs-app.js"></script>
   <!-- Javascript End -->
 </body>
 

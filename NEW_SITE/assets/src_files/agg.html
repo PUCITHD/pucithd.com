@@ -1,0 +1,25 @@
+<div class="text-center font-montaga welcome-heading">Aggregate Calculator</div>
+<div class="calc-dark">
+  <form>
+    <div class="form-group"><input class="form-control" type="number" placeholder="Total Matric Marks"
+        id="total_matric_marks"></div>
+    <div class="form-group"><input class="form-control" type="number" placeholder="Obtained Matric Marks"
+        id="obtained_matric_marks"></div>
+    <div class="form-group"><input class="form-control" type="number" placeholder="Total Inter Marks"
+        id="total_inter_marks"></div>
+    <div class="form-group"><input class="form-control" type="number" placeholder="Obtained Inter Marks"
+        id="obtained_inter_marks"></div>
+    <div class="form-group">
+      <div class="form-check"><input class="form-check-input" type="checkbox" id="hafiz-e-quran"><label
+          class="form-check-label" for="hafiz-e-quran">Hafiz e Quran</label></div>
+    </div>
+    <div class="form-group"><input class="form-control" type="number" placeholder="Passing Year of Last Degree"
+        id="last_degree_year"> </div>
+    <div class="form-group"><button class="btn btn-outline-primary btn-block" type="button"
+        onclick="calculateAgg();">Calculate</button> </div>
+    <div class="form-group text-center font-montserrat" style="font-size: 130%;"><strong
+        class="text-center font-montserrat" style="font-size: 150%;" id="calc_result">0.00</strong></div>
+    <div class="form-group"><button class="btn btn-outline-primary" type="button" onclick="launchHome();"
+        id="back-arrow"><i class="fas fa-arrow-left"></i></button> </div>
+  </form>
+</div>
