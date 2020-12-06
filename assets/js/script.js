@@ -1,246 +1,104 @@
-
-
-
-
-$(".get-ag").click(function(){
-
-  	var totalMatric=$(".t-matric").val();
-  	var matric=$(".matric").val();
-    var inter=$(".inter").val();
-    var totalInter = $(".t-inter").val();
-  	//var puTest=$(".pu").val();
-  	var Hifz=$(".hifz").find(":selected").text();
-    if((totalMatric!="" || totalMatric!=" ") && (matric!="" || matric!=" ") && (inter!="" || inter!=" ")&& (totalInter!="" || totalInter!=" ")){
-  	if(Hifz=="No Hifz-e-Quran"){
-  		var interFull=totalInter; //1179/1375=60.02
-  		var marksEarned=+1/4*matric+ +inter;
-  		var TotalMarks=+1/4*totalMatric+ +interFull;
-  		var agregate1=100*(marksEarned/TotalMarks);
-
-      var year=$("#year").val();
-        $(".form1").slideUp("slow");
-        $(".agregate-msg").slideDown("slow");
-            $(".msg-display").html("Your Morning Aggregate for PUCIT is:");
-            $(".msg").html("<b>"+(agregate1-2*(2020-parseInt(year))).toFixed(4)+"</b>");
-            $(".msgX-display").html("Your Afternoon Aggregate for PUCIT is:");
-            $(".msgX").html("<b>"+(agregate1).toFixed(4)+"</b>");
-        $(".goodluck").html("<div class='fb-share-button' data-href='http://pucithd.com/aggregate-calculator.html' data-layout='button_count' data-size='large' data-mobile-iframe='true'><a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpucithd.com%2Faggregate-calculator.html&amp;src=sdkpreparse' class='fb-xfbml-parse-ignore'>Share</a></div>");
-        $(".back").html("<button class='button is-primary back-btn'>Return Back</button>");
-  	}else{
-  		
-      var interFull=totalInter; //1179/1375=61.04
-      var hifz_marks=20;
-      var marksEarned=+1/4*matric+ +inter +20;
-      var TotalMarks=+1/4*totalMatric+ +interFull;
-      var agregate2=100*(marksEarned/TotalMarks);
-
-        var year=$("#year").val();
-      $(".form1").slideUp("slow");
-      $(".agregate-msg").slideDown("slow");
-        $(".msg-display").html("Your Morning Aggregate for PUCIT is:");
-        $(".msg").html("<b>"+(agregate2-2*(2020-parseInt(year))).toFixed(4)+"</b>");
-        $(".msgX-display").html("Your Afternoon Aggregate for PUCIT is:");
-        $(".msgX").html("<b>"+(agregate2).toFixed(4)+"</b>");
-      $(".goodluck").html("<b>Best of Luck :)</b>");
-      $(".back").html("<button class='button is-primary back-btn'>Return Back</button>");
-  	}
-  	}else{
-      alert("All Fields Are Required!");
+//display shifting ajax functions (calcNo: 0, agg; 1, gpa; 2, cgpa)
+const launchAggCalc = () => {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = () => {
+    if (xhttp.readyState === 4 && xhttp.status === 200) {
+      document.getElementsByTagName("main")[0].innerHTML = xhttp.responseText;
     }
-  });
-  $(".get-ag2").click(function(){
-    var mstotalMatric=$(".ms-t-matric").val();
-    var msmatric=$(".ms-matric").val();
-    var msinter=$(".ms-inter").val();
-    var msbsc_total=$(".bsc-total-marks").val();
-    var msbsc_obt=$(".bsc-obt-marks").val();
-    var msHifz=$(".ms-hifz").find(":selected").text();
-    var year=$("#year2").val();
-    if((mstotalMatric!="" || mstotalMatric!=" ") && (msmatric!="" || msmatric!=" ") && (msinter!="" || msinter!=" ")  && (msbsc_total!="" || msbsc_total!=" ") && (msbsc_obt!="" || msbsc_obt!=" ")){
-    if(msHifz=="No Hifz-e-Quran"){
-      var interFull=1100; //1179/1375=60.02
-      var marksEarned=+1/4*msmatric+ +1/5*msinter + +msbsc_obt;
-      var TotalMarks=+1/4*mstotalMatric+ +1/5*interFull + +msbsc_total;
-      var aggregate=100*(marksEarned/TotalMarks);
-
-
-      $(".form2").slideUp("slow");
-      $(".agregate-msg").slideDown("slow");
-      $(".msg-display").html("Your Morning Aggregate for PUCIT is:");
-      $(".msg").html("<b>"+(aggregate-2*(2020-parseInt(year))).toFixed(4)+"</b>");
-        $(".msgX-display").html("Your Afternoon Aggregate for PUCIT is:");
-        $(".msgX").html("<b>"+aggregate.toFixed(4)+"</b>");
-      $(".goodluck").html("<b>Best of Luck :)</b>");
-      $(".back").css("display","none");
-      $(".back2").html("<button class='button is-primary back-btn'>Return Back</button>");
-    }else{
-      
-      var interFull=1100; //1179/1375=61.04
-      var marksEarned=+1/4*msmatric+ +1/5*msinter + +msbsc_obt + 20;
-      var TotalMarks=+1/4*mstotalMatric+ +1/5*interFull + +msbsc_total;
-      var aggregate=100*(marksEarned/TotalMarks);
-
-
-      var year=$("#year2").val();
-      $(".form2").slideUp("slow");
-      $(".agregate-msg").slideDown("slow");
-      $(".msg-display").html("Your Morning Aggregate for PUCIT is:");
-      $(".msg").html("<b>"+(aggregate-2*(2019-parseInt(year))).toFixed(4)+"</b>");
-        $(".msgX-display").html("Your Afternoon Aggregate for PUCIT is:");
-        $(".msgX").html("<b>"+aggregate.toFixed(4)+"</b>");
-      $(".goodluck").html("<b>Best of Luck :)</b>");
-      $(".back").css("display","none");
-      $(".back2").html("<button class='button is-primary back-btn'>Return Back</button>");
-    }
-    }else{
-      alert("All Fields Are Required!");
-    }
-  });
- $(".back").click(function(){
-   $(".agregate-msg").slideUp("slow");
-   $(".form1").slideDown("slow");
- });
-
- $(".back2").click(function(){
-   $(".agregate-msg").slideUp("slow");
-   $(".form2").slideDown("slow");
- });
-   $(".goto-main").click(function(){
-    $(".form1").slideUp("slow");
-    $(".main-form").slideDown("slow");
-   });
-   $(".goto-main2").click(function(){
-    $(".form2").slideUp("slow");
-    $(".main-form").slideDown("slow");
-   });
-$(".continue").click(function(){
-  var degree=$(".deg").find(":selected").text();
-  if(degree=="BS Program"){
-    $(".main-form").slideUp("slow");
-    $(".form1").slideDown("slow");
-  }else{
-    $(".main-form").slideUp("slow");
-    $(".form2").slideDown("slow");
   }
-});
-
-
-//gpa calculator
-
-var count = $("#con").click(function abc() {
-    var invalid;
-    count = $("#count").val();
-    if(count.length<1)
-    {
-        alert('Please Enter No of Subjects')
+  xhttp.open("GET", "./assets/src_files/agg.html");
+  xhttp.send();
+}
+const launchGpaCalc = () => {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = () => {
+    if (xhttp.readyState === 4 && xhttp.status === 200) {
+      document.getElementsByTagName("main")[0].innerHTML = xhttp.responseText;
     }
-    if (count > 0) {
-        $(".mainForm").fadeOut();
-        $(".newForm").fadeIn();
-        var count = $("#count").val();
-
-
-
-        if (count > 0) {
-            $('#tblbody').html("");
-            for (var i = 0; i < count; i++) {
-                var tr = $("<tr>");
-                var td1 = $("<td style=\"text-align: center\">");
-                var td2 = $("<td style=\"text-align: center\">");
-                td1.html("<input type='number' min='0' class='obtainedMarks'>").val;
-                td2.html("<input type='number' min='1'  class='creditHours'>").val;
-
-
-                tr.append(td1);
-                tr.append(td2);
-                $("#tblbody").append(tr);
-            }
-        }
-    }
-});
-
-
-
-$(".get-gpa").click(function () {
-
-
-    var count = $('.creditHours').length;
-
-    var invalid;
-    var gpa = 0.00;
-    var invalidMarks = false;
-    var tsum = 0.00;
-    var sum = 0.00
-    var tchrs = 0;
-
-    for(var i=0;i<count;i++)
-    {
-        var marks=document.getElementsByClassName('obtainedMarks')[i];
-        var chrs=document.getElementsByClassName('creditHours')[i];
-        if((marks.value).length<1 || (chrs.value).length<1)
-        {
-            invalid=true;
-            break;
-        }
-        if(marks.value >100  || marks.value < 0){
-            invalidMarks = true;
-            break;
-        }
-        if (marks.value >= 85 && marks.value <= 100) {
-            tsum = 4.0
-        } else if (marks.value >= 80 && marks.value < 85) {
-            tsum = 3.7;
-        } else if (marks.value >= 75 && marks.value < 80) {
-            tsum = 3.3;
-        } else if (marks.value >= 70 && marks.value < 75) {
-            tsum = 3.0;
-        } else if (marks.value >= 65 && marks.value < 70) {
-            tsum = 2.7;
-        } else if (marks.value >= 61 && marks.value < 65) {
-            tsum = 2.3;
-        } else if (marks.value >= 58 && marks.value < 61) {
-            tsum = 2.0;
-        } else if (marks.value >= 55 && marks.value < 58) {
-            tsum = 1.7;
-        } else if (marks.value >= 50 && marks.value < 55) {
-            tsum = 1.0;
-        } else if (marks.value < 50) {
-            tsum = 0.0;
-        }
-        sum = sum + (tsum * parseInt(chrs.value));
-        tchrs = tchrs +parseInt(chrs.value);
+  }
+  xhttp.open("GET", "./assets/src_files/gpa.html");
+  xhttp.send();
+}
+var noOfCourses;
+const startGPA_calc = () => {
+  noOfCourses = Number(document.getElementById("course_count").value);
+  if (noOfCourses > 0 && noOfCourses <= 7) {
+    document.getElementById("course_count").style.display = "none";
+    document.getElementById("back-arrow").style.display = "none";
+    document.getElementById("gpa_continue_btn").style.display = "none";
+    for (let i = 0; i < noOfCourses; i++) {
+      document.getElementById("gpa-calc-form").innerHTML += String('<div class="form-group d-flex flex-row"><input class="form-control" type="number" placeholder="Marks" id="marks' + i + '"><input class="form-control" type="number" placeholder="Credit Hours" id=credit_hour' + i + '></div>');
+      //every field assigned id as e.g. course0 and credit_hour0
 
     }
-    if(invalid==true)
-        alert("Please fill all the required fields.");
-    if (invalidMarks == true)
-        alert("Obtained Marks Must be from 0-100");
-    if(!invalid && !invalidMarks)
-    {
-        gpa = sum / parseFloat(tchrs);
-        $(".newForm").slideUp("slow");
-        $(".gpa-msg").slideDown("slow");
-        $(".msgDisplay").html("<h1>Your GPA is:</h1>");
-        $(".msg1").html("<b>"+gpa.toFixed(2)+"</b>");
-        $(".goodLuck").html("<b>Best of Luck :)</b>");
-        $(".back3").html("<button class='button is-primary back-btn'>Return Back</button>");
-
+    document.getElementById("gpa-calc-form").innerHTML += String('<div class="form-group"><button class="btn btn-outline-primary btn-block" type="button" onclick="calculateGPA();" id="gpa_calculate_btn">Calculate</button></div>');
+    document.getElementById("gpa-calc-form").innerHTML += String('<div class="form-group" onclick="launchGpaCalc();" id="back-arrow"><button class="btn btn-outline-primary" type="button"><i class="fas fa-arrow-left"></i></button></div>');
+    document.getElementById("gpa-calc-form").innerHTML += String('<div class="form-group text-center font-montserrat" style="font-size: 130%;"><strong class="text-center font-montserrat" style="font-size: 150%;" id="calc_result">0.00</strong></div>');
+  } else {
+    document.getElementById("error_msg").textContent = "Invalid Input! Try Again"
+  }
+}
+const launchCgpaCalc = () => {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = () => {
+    if (xhttp.readyState === 4 && xhttp.status === 200) {
+      document.getElementsByTagName("main")[0].innerHTML = xhttp.responseText;
     }
+  }
+  xhttp.open("GET", "./assets/src_files/cgpa.html");
+  xhttp.send();
+}
+const launchHome = () => {
+  window.open("./index.html", "_self");
+}
+const launchBlog = () => {
+  window.open("http://blog.pucithd.com", "_self")
+}
+const launchPucitX = () => {
+  window.open("http://pucitx.pucithd.com", "_self")
+}
+const launchPucitDev = () => {
+  window.open("https://pucit.dev/", "_self")
+}
 
 
 
-
-});
-
-$(".goBack").click(function () {
-    $(".newForm").fadeOut();
-    $(".mainForm").fadeIn();
-})
-
-
-
-
-$(".back3").click(function(){
-    $(".gpa-msg").slideUp("slow");
-    $(".newForm").slideDown("slow");
-});
+//calculators functionalities
+const calculateAgg = () => {
+  var input = {
+    t_matric: Number(document.querySelector("#total_matric_marks").value) / 4,
+    o_matric: Number(document.querySelector("#obtained_matric_marks").value) / 4,
+    t_inter: Number(document.querySelector("#total_inter_marks").value),
+    o_inter: Number(document.querySelector("#obtained_inter_marks").value),
+    last_degree_year: Number(document.querySelector("#last_degree_year").value),
+    hafiz_flag: document.querySelector("#hafiz-e-quran").checked
+  };
+  document.querySelector("#calc_result").textContent =
+    Number(100 * ((input.o_matric / 4 + input.o_inter + (input.hafiz_flag ? 20 : 0)) /
+      (input.t_matric / 4 + input.t_inter))).toPrecision(7);
+}
+const getGrade = (marks) => {
+  if(marks >= 85) return 4.00;
+  if(marks >= 80) return 3.70;
+  if(marks >= 75) return 3.30;
+  if(marks >= 70) return 3.00;
+  if(marks >= 65) return 2.70;
+  if(marks >= 61) return 2.30;
+  if(marks >= 58) return 2.00;
+  if(marks >= 55) return 1.70;
+  if(marks >= 50) return 1.00;
+  else return 0.00;
+}
+const calculateGPA = () => {
+  //validation pending
+  var sum = 0,
+    ch = 0;
+  for (let i = 0; i < noOfCourses; i++) {
+    sum +=
+      getGrade(Number(document.getElementById(String("marks" + i)).value)) *
+      Number(document.getElementById(String("credit_hour" + i)).value);
+    ch += Number(document.getElementById(String("credit_hour" + i)).value);
+  }
+  console.log(sum / ch);
+  document.getElementById("calc_result").textContent = Number(sum / ch).toPrecision(3);
+}
