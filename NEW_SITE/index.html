@@ -38,18 +38,8 @@
     <div id="featured-slider-container">
       <div class="text-uppercase font-montserrat" style="font-weight: bold;"><span>| </span>featured </div>
       <!-- SLIDER TILES -->
-      <div class="owl-carousel">
-        <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-        <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-        <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-        <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-        <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-        <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-        <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-        <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-        <!-- MAKE A TILE AND ADD IT  HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-        <div><img src="https://via.placeholder.com/300x200.jpg?text=placeholder" alt=""></div>
-      </div>
+      <div class="owl-carousel" id="carousel-slider"></div>
+      <!-- tiles are populated and owl carousel is called in file ./assets/js/slide-loader-wp-api.js -->
     </div><!-- Bottom row of pucitx pucitdev calculators and blog -->
     <div class="row bottom-container container-fluid">
       <!-- pucitx and pucitdev -->
@@ -72,14 +62,14 @@
       <div class="col-lg-4 col-12 d-flex justify-content-center">
         <div class="blog-box text-center" style="cursor: pointer;" onclick="launchBlog();"> <strong
             class="font-raleway">PUCIT BLOG</strong>
-          <p>Community of PUCITians to share thoughts through articles and blogs to collaborate on ideas and innovate
-            productive things 🤍</p>
+          <p>Community of PUCITians to share thoughts through articles to collaborate on ideas and productive things 🤍
+          </p>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="font-raleway"></footer>
+  <footer class="font-raleway d-none"></footer>
 
 
   <!-- JAVASCRIPT Start -->
@@ -120,19 +110,6 @@
     });
   </script>
   <script src="assets/js/owl.carousel.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $(".owl-carousel").owlCarousel({
-        margin: 15,
-        mouseDrag: true,
-        touchDrag: true,
-        autoWidth: true,
-        loop: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-      });
-    });
-  </script>
   <script src="assets/js/anime.min.js"></script>
   <script src="assets/js/script.js"></script>
   <script>
@@ -144,6 +121,7 @@
   <script>
     window.onload = changeBgImage;
     const noOfBgImgs = 5;
+
     function changeBgImage() {
       document.getElementsByTagName("body")[0].style.background = 'url("./assets/img/bg_img/' + (Math.floor(Math
         .random() * 10) % noOfBgImgs) + '.jpg") repeat center center fixed';
@@ -151,6 +129,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="./assets/js/particlejs-app.js"></script>
+  <script src="/assets/js/slide-loader-wp-api.js"></script>
   <!-- Javascript End -->
 </body>
 

@@ -76,6 +76,25 @@ body {
   justify-content: center;
 }
 
+#featured-slider-container {
+  margin-bottom: 20px;
+}
+
+.card .card-img {
+  width: 18rem;
+  height: 13rem;
+  opacity: 0.2;
+}
+
+.slide-link {
+  color: white;
+}
+
+.slide-link:hover {
+  color: lightgray;
+  text-decoration: none;
+}
+
 .social-media-list {
   text-align: center;
   display: grid;
@@ -151,6 +170,7 @@ footer {
   text-align: center;
   width: 100%;
   color: var(--main-foreground-color);
+  margin-bottom: 50px;
   margin-bottom: 10px;
 }
 
