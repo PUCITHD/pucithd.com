@@ -1,0 +1,33 @@
+<div class="text-center font-montaga welcome-heading">Welcome to <strong>PUCIT Help Desk</strong></div>
+    <div id="featured-slider-container">
+      <div class="text-uppercase font-montserrat" style="font-weight: bold;"><span>| </span>featured </div>
+      <!-- SLIDER TILES -->
+      <div class="owl-carousel" id="carousel-slider"></div>
+      <!-- tiles are populated and owl carousel is called in file ./assets/js/slide-loader-wp-api.js -->
+    </div><!-- Bottom row of pucitx pucitdev calculators and blog -->
+    <div class="row bottom-container container-fluid">
+      <!-- pucitx and pucitdev -->
+      <div class="col-12 col-lg-4 d-flex flex-row flex-lg-column justify-content-around">
+        <div style="cursor: pointer;" onclick="launchPucitX();"> <img src="assets/img/pucitx.png" class="x-dev-img"
+            alt="pucitx">
+          <p style="text-align: center" class="d-none d-md-block">Free Online Courses</p>
+        </div>
+        <div style="cursor: pointer;" onclick="launchPucitDev();"> <img src="assets/img/pucitdev.png" class="x-dev-img"
+            alt="pucitdev">
+          <p style="text-align: center" class="d-none d-md-block">Projects Showcase</p>
+        </div>
+      </div> <!-- calculators -->
+      <div class="col-lg-4 col-12 font-roboto calculator-btns d-flex flex-row flex-lg-column justify-content-around">
+        <button class="bttn-unite bttn-md bttn-primary" onclick="launchAggCalc();"><i
+            class="fas fa-calculator"></i><br>Aggregate</button> <button class="bttn-unite bttn-md bttn-primary"
+          onclick="launchGpaCalc();"><i class="fas fa-calculator"></i><br>GPA</button> <button
+          class="bttn-unite bttn-md bttn-primary" onclick="launchCgpaCalc();"><i
+            class="fas fa-calculator"></i><br>CGPA</button> </div> <!-- blog -->
+      <div class="col-lg-4 col-12 d-flex justify-content-center">
+        <div class="blog-box text-center" style="cursor: pointer;" onclick="launchBlog();"> <strong
+            class="font-raleway">PUCIT BLOG</strong>
+          <p>Community of PUCITians to share thoughts through articles to collaborate on ideas and productive things 🤍
+          </p>
+        </div>
+      </div>
+    </div>
